@@ -21,12 +21,17 @@ spec:
         volumeMounts:
           - name: jenkins-docker-sock
             mountPath: /var/run/docker.sock
+          - name: jenkins-docker
+            mountPath: /usr/bin/docker
           - name: jenkins-home
             mountPath: /var/jenkins-home
       volumes:
         - name: jenkins-docker-sock
           hostPath:
             path: /var/run/docker.sock
+        - name: jenkins-docker
+          hostPath:
+            path: /usr/bin/docker
         - name: jenkins-home
           hostPath:
             path: /root/k8s-cookalone/jenkins/jenkins-home
