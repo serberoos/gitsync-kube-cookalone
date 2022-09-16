@@ -19,8 +19,14 @@ spec:
           - name: http-port
             containerPort: 8080
         volumeMounts:
-          - name: jenkins-vol
-            mountPath: /var/jenkins_vol
+          - name: jenkins-docker-sock
+            mountPath: /var/run/docker.sock
+          - name: jenkins-home
+            mountPath: /var/jenkins-home
       volumes:
-        - name: jenkins-vol
-          emptyDir: {}
+        - name: jenkins-docker-sock
+          hostPath:
+            path: /var/run/docker.sock
+        - name: jenkins-home
+          hostPath:
+            path: /root/k8s-cookalone/jenkins/jenkins-home
