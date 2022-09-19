@@ -15,7 +15,7 @@ spec:
       containers:
       - name: jenkins
         image: jenkins/jenkins:lts
-        securityContent:
+        securityContext:
           privileged: true
         ports:
           - name: http-port
