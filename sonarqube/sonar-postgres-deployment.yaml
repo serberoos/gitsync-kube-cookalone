@@ -13,7 +13,7 @@ spec:
     metadata:
       name: sonar-postgres
       labels:
-        name: sonar-postgres
+        app: sonar-postgres
     spec:
       containers:
         - image: postgres:latest

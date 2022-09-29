@@ -13,7 +13,7 @@ spec:
     metadata:
       name: sonarqube
       labels:
-        name: sonarqube
+        app: sonarqube
     spec:
       containers:
         - image: sonarqube:latest
