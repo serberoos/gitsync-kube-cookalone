@@ -2,7 +2,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: demo-sonarqube-pvc
-  namespace: sonar-demo
+  namespace: sonarqube
   labels:
     type: sonarqube
 spec:
