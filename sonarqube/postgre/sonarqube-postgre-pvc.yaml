@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: demo-postgre-pvc # modify
+  namespace: sonar-demo # modify
+  labels:
+    type: postgre
+spec:
+  storageClassName: postgre
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi

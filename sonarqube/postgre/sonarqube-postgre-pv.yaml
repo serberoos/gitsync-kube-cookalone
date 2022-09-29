@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: demo-postgre-pv # modify
+  namespace: sonar-demo # modify
+  labels:
+    type: postgre
+spec:
+  storageClassName: postgre
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 10Gi
+  hostPath:
+    path: "/bitnami/postgresql"
