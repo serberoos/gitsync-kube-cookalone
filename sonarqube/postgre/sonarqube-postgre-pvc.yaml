@@ -1,8 +1,8 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: demo-postgre-pvc # modify
-  namespace: sonar-demo # modify
+  name: sonarqube-postgre-pvc # modify
+  namespace: sonarqube # modify
   labels:
     type: postgre
 spec:
