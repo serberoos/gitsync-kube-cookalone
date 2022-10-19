@@ -1,8 +1,8 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: demo-postgre-pv # modify
-  namespace: sonar-demo # modify
+  name: sonarqube-postgre-pv # modify
+  namespace: sonarqube # modify
   labels:
     type: postgre
 spec:
